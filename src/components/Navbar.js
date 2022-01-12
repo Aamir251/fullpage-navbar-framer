@@ -84,20 +84,13 @@ function Navbar({ isOpen, setIsOpen }) {
               <figure className="relative">
                 {navBarData.map((item, index) => {
                   return (
-                    <AnimatePresence key={index}>
-                      {currentIndex === index && (
-                        <motion.img
-                          src={item.img}
-                          className="absolute nav_img"
-                          alt=""
-                          variants={imgVariants}
-                          initial="initial"
-                          animate="animate"
-                          transition={transition}
-                          exit="exit"
-                        />
-                      )}
-                    </AnimatePresence>
+                    <img
+                      src={item.img}
+                      className={`absolute nav_img ${
+                        index === currentIndex && "active"
+                      }`}
+                      alt=""
+                    />
                   );
                 })}
               </figure>

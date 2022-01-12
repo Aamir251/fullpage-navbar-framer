@@ -83,6 +83,10 @@
   height: 100%;
   object-fit: cover;
   left: 0;
+  top: 100%;
+  transition: top 0.6s ease;
+}
+.nav_img_wrapper img.active {
   top: 0;
 }
 
